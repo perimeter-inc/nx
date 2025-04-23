@@ -26,7 +26,7 @@ EXLA_CACHE_SO_LINK_PATH = $(CWD_RELATIVE_TO_PRIV_PATH)/$(EXLA_CACHE_SO)
 # break on some conflicting llvm/std definitions
 # Note: this is on :xla 0.5.0 -- things can change with later versions
 CFLAGS = -fPIC -I$(ERTS_INCLUDE_DIR) -I$(XLA_INCLUDE_PATH) -Wall -Wno-sign-compare \
-	 -Wno-unused-parameter -Wno-missing-field-initializers -Wno-comment \
+	 -Wno-unused-parameter -Wno-missing-field-initializers -Wno-comment -Wno-missing-template-arg-list-after-template-kw \
 	 -std=c++17 -w -DLLVM_VERSION_STRING=
 
 NVCCFLAGS = -shared -Xcompiler -fPIC
